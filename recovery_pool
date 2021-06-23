@@ -1,0 +1,30 @@
+Script started on 2021-06-23 13:41:02+00:00
+[root@centos8 ~]# zpool import -d ${PWD}/zpoolexport/
+   pool: otus
+     id: 6554193320433390805
+  state: ONLINE
+ action: The pool can be imported using its name or numeric identifier.
+ config:
+
+   otus                         ONLINE
+     mirror-0                   ONLINE
+       /root/zpoolexport/filea  ONLINE
+       /root/zpoolexport/fileb  ONLINE
+[root@centos8 ~]# zpool import -d ${PWD}/zpoolexport/ otus
+[root@centos8 ~]# zpool status otus
+  pool: otus
+ state: ONLINE
+  scan: none requested
+config:
+
+   NAME                         STATE     READ WRITE CKSUM
+   otus                         ONLINE       0     0     0
+     mirror-0                   ONLINE       0     0     0
+       /root/zpoolexport/filea  ONLINE       0     0     0
+       /root/zpoolexport/fileb  ONLINE       0     0     0
+
+errors: No known data errors
+[root@centos8 ~]# exit
+exit
+
+Script done on 2021-06-23 13:41:25+00:00
