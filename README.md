@@ -5,6 +5,7 @@ zpool create pool_test sdb
 
 Сравнение различных видов сжатие
 ![Screen](https://github.com/MaxOOOOON/zfs_courses/blob/main/compare_compression.png)
+
 Исходя из результата, можно сказать, что gzip - лучший алгоритм сжатия, чем другие
 
 
